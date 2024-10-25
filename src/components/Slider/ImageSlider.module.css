@@ -1,0 +1,30 @@
+/* Slick dots ko dashes mein convert karna */
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    gap: 90px; /* Dashes ke darmiyan ka space */
+    margin-top:20px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .slick-dots li {
+    margin: 0;
+  }
+  
+  .slick-dots li button:before {
+    content: "";
+    display: block;
+    width: 90px; /* Dash ki width */
+    height: 4px;  /* Dash ki height */
+    background-color: rgb(0, 0, 0); /* Default gray color for non-active dashes */
+    border-radius: 4px; /* Rounded edges for the dashes */
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    background-color: rgb(0, 0, 0); /* Active dash ka color black */
+    width: 50px; /* Active dash thoda lamba */
+  }
+  
